@@ -28,7 +28,7 @@ text = st.text_input("Enter your text:")
 operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
 
 # Proses enkripsi atau dekripsi berdasarkan pilihan
-if st.button("Proses"):
+if st.button("Execute"):
     if operation == "Encrypt":
         hasil = caesar_encrypt(text, int(shift))
         st.write("Hasil Enkripsi:", hasil)
