@@ -53,7 +53,7 @@ if st.button("Execute"):
         # Menampilkan hasil dengan latar belakang box
         st.markdown(f'''
         <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
-            <strong>Hasil Enkripsi:</strong> {hasil}
+            <strong>Encrypted Text:</strong> {hasil}
         </div>
         ''', unsafe_allow_html=True)
     elif operation == "Decrypt":
@@ -61,6 +61,6 @@ if st.button("Execute"):
         # Menampilkan hasil dengan latar belakang box
         st.markdown(f'''
         <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
-            <strong>Hasil Dekripsi:</strong> {hasil}
+            <strong>Decrypted Text:</strong> {hasil}
         </div>
         ''', unsafe_allow_html=True)
