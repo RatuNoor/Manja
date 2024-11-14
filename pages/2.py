@@ -1,5 +1,6 @@
 import streamlit as st
 
+key = "aagam"
 # Fungsi untuk enkripsi menggunakan Vigenère Cipher
 def vigenere_encrypt(text, key):
     encrypted_text = ""
@@ -39,12 +40,12 @@ def vigenere_decrypt(text, key):
     return decrypted_text
 
 # Streamlit App
-st.title("Vigenère Cipher Encryption and Decryption")
+st.title("Encryption and Decryption")
 
 # Input text and key
 operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
 text = st.text_input("Enter your text:")
-key = st.text_input("Enter your key:")
+#key = st.text_input("Enter your key:")
 
 # Display result
 if st.button("Execute"):

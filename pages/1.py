@@ -1,5 +1,6 @@
 import streamlit as st
 
+shift= 5
 # Fungsi untuk enkripsi menggunakan Caesar Cipher
 def caesar_encrypt(text, shift):
     encrypted_text = ""
@@ -19,11 +20,11 @@ def caesar_decrypt(text, shift):
     return caesar_encrypt(text, -shift)  # Menggunakan shift negatif untuk dekripsi
 
 # Program utama dengan Streamlit
-st.title("Caesar Cipher Encryption and Decryption")
+st.title("Encryption and Decryption")
 
 # Input dari pengguna
 text = st.text_input("Masukkan teks:")
-shift = st.number_input("Masukkan nilai shift:", min_value=0, max_value=25, value=0)
+#shift = st.number_input("Masukkan nilai shift:", min_value=0, max_value=25, value=0)
 pilihan = st.radio("Pilih tindakan:", ("Enkripsi", "Dekripsi"))
 
 # Proses enkripsi atau dekripsi berdasarkan pilihan
