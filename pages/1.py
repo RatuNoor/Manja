@@ -18,7 +18,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('./images/bg4.png')
+set_background('./images/background.png')
 
 shift = 5
 # Fungsi untuk enkripsi menggunakan Caesar Cipher
@@ -52,7 +52,7 @@ if st.button("Execute"):
         hasil = caesar_encrypt(text, int(shift))
         # Menampilkan hasil dengan latar belakang box
         st.markdown(f'''
-        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+        <div style="background-color: #F0F4F4; padding: 10px; border-radius: 5px; color: black;">
             <strong>Encrypted Text:</strong> {hasil}
         </div>
         ''', unsafe_allow_html=True)
@@ -60,7 +60,7 @@ if st.button("Execute"):
         hasil = caesar_decrypt(text, int(shift))
         # Menampilkan hasil dengan latar belakang box
         st.markdown(f'''
-        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+        <div style="background-color: #F0F4F4; padding: 10px; border-radius: 5px; color: black;">
             <strong>Decrypted Text:</strong> {hasil}
         </div>
         ''', unsafe_allow_html=True)

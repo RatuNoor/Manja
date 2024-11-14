@@ -18,7 +18,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('./images/bg4.png')
+set_background('./images/background.png')
 
 key = "aagam"
 # Fungsi untuk enkripsi menggunakan Vigenère Cipher
@@ -72,7 +72,7 @@ if st.button("Execute"):
         result = vigenere_encrypt(text, key)
         # Tampilkan hasil enkripsi dengan latar belakang box
         st.markdown(f'''
-        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+        <div style="background-color: #F0F4F4; padding: 10px; border-radius: 5px; color: black;">
             <strong>Encrypted Text:</strong> {result}
         </div>
         ''', unsafe_allow_html=True)
@@ -80,7 +80,7 @@ if st.button("Execute"):
         result = vigenere_decrypt(text, key)
         # Tampilkan hasil dekripsi dengan latar belakang box
         st.markdown(f'''
-        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+        <div style="background-color: #F0F4F4; padding: 10px; border-radius: 5px; color: black;">
             <strong>Decrypted Text:</strong> {result}
         </div>
         ''', unsafe_allow_html=True)
