@@ -1,2 +1,3 @@
 import streamlit as st
-st.title("awkwoawoakwao")
+st.title("freya cantik")
+
