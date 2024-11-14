@@ -13,6 +13,10 @@ st.write("Selamat datang di halaman utama aplikasi enkripsi!")
 
 col1, col2 = st.columns([1, 1])
 
+
+st.page_link("pages/1.py", label=" Cryptography 1", icon="1️⃣")
+st.page_link("pages/2.py", label=" Cryptography 2", icon="2️⃣")
+
 # Tombol untuk navigasi ke halaman Caesar dan Vignere
 # with col1:
 #     if st.button("Pergi ke Halaman 1"):
