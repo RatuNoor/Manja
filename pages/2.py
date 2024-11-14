@@ -65,13 +65,22 @@ st.title("Encryption and Decryption")
 # Input text and key
 text = st.text_input("Enter your text:")
 operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
-#key = st.text_input("Enter your key:")
 
 # Display result
 if st.button("Execute"):
     if operation == "Encrypt":
         result = vigenere_encrypt(text, key)
-        st.write("Encrypted Text:", result)
+        # Tampilkan hasil enkripsi dengan latar belakang box
+        st.markdown(f'''
+        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+            <strong>Encrypted Text:</strong> {result}
+        </div>
+        ''', unsafe_allow_html=True)
     elif operation == "Decrypt":
         result = vigenere_decrypt(text, key)
-        st.write("Decrypted Text:", result)
+        # Tampilkan hasil dekripsi dengan latar belakang box
+        st.markdown(f'''
+        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+            <strong>Decrypted Text:</strong> {result}
+        </div>
+        ''', unsafe_allow_html=True)

@@ -20,7 +20,7 @@ def set_background(png_file):
 
 set_background('./images/bg4.png')
 
-shift= 5
+shift = 5
 # Fungsi untuk enkripsi menggunakan Caesar Cipher
 def caesar_encrypt(text, shift):
     encrypted_text = ""
@@ -44,14 +44,23 @@ st.title("Encryption and Decryption")
 
 # Input dari pengguna
 text = st.text_input("Enter your text:")
-#shift = st.number_input("Masukkan nilai shift:", min_value=0, max_value=25, value=0)
 operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
 
 # Proses enkripsi atau dekripsi berdasarkan pilihan
 if st.button("Execute"):
     if operation == "Encrypt":
         hasil = caesar_encrypt(text, int(shift))
-        st.write("Hasil Enkripsi:", hasil)
+        # Menampilkan hasil dengan latar belakang box
+        st.markdown(f'''
+        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+            <strong>Hasil Enkripsi:</strong> {hasil}
+        </div>
+        ''', unsafe_allow_html=True)
     elif operation == "Decrypt":
         hasil = caesar_decrypt(text, int(shift))
-        st.write("Hasil Dekripsi:", hasil)
+        # Menampilkan hasil dengan latar belakang box
+        st.markdown(f'''
+        <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; color: black;">
+            <strong>Hasil Dekripsi:</strong> {hasil}
+        </div>
+        ''', unsafe_allow_html=True)
