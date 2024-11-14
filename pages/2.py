@@ -43,8 +43,8 @@ def vigenere_decrypt(text, key):
 st.title("Encryption and Decryption")
 
 # Input text and key
-operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
 text = st.text_input("Enter your text:")
+operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
 #key = st.text_input("Enter your key:")
 
 # Display result

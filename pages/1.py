@@ -23,15 +23,15 @@ def caesar_decrypt(text, shift):
 st.title("Encryption and Decryption")
 
 # Input dari pengguna
-text = st.text_input("Masukkan teks:")
+text = st.text_input("Enter your text:")
 #shift = st.number_input("Masukkan nilai shift:", min_value=0, max_value=25, value=0)
-pilihan = st.radio("Pilih tindakan:", ("Enkripsi", "Dekripsi"))
+operation = st.radio("Select Operation", ("Encrypt", "Decrypt"))
 
 # Proses enkripsi atau dekripsi berdasarkan pilihan
 if st.button("Proses"):
-    if pilihan == "Enkripsi":
+    if operation == "Encrypt":
         hasil = caesar_encrypt(text, int(shift))
         st.write("Hasil Enkripsi:", hasil)
-    elif pilihan == "Dekripsi":
+    elif operation == "Decrypt":
         hasil = caesar_decrypt(text, int(shift))
         st.write("Hasil Dekripsi:", hasil)
