@@ -1,5 +1,4 @@
 import streamlit as st
-
 # Fungsi untuk enkripsi menggunakan Caesar Cipher
 def caesar_encrypt(text, shift):
     encrypted_text = ""
