@@ -37,22 +37,8 @@ def caesar_encrypt(text, shift):
 # Level 1
 st.title("❄️ Cryptography Challenge - Level 1 ❄️")
 st.subheader("Dapatkah Anda menebak plain text dari teks yang telah dienkripsi?")
-# # Tambahkan expander untuk menampilkan/menyembunyikan persamaan
-# with st.expander("Lihat/Hide Clue"):
-#     st.markdown(
-#         r"""
-#         Persamaan yang akan diselesaikan:
-#         \[
-#         \frac{x^2 - 49}{x - 7} + 10 = 17
-#         \]
-#         """
-#     )
 
-# Definisikan variabel dan persamaan
-x = sp.Symbol('x')
-equation = sp.Eq((x**2 - 49) / (x - 7) + 10, 17)
-
-# Tampilkan persamaan dalam bentuk Python
+# Tampilkan persamaan (clue) dalam bentuk Python
 with st.expander("**Lihat Clue**"):
     st.write("Clue:")
     st.code("(x**2 - 49)/(x - 7) + 10 = 24")
